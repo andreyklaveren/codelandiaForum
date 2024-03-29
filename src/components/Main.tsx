@@ -36,4 +36,7 @@ export const StyledMain = styled.main `
   align-items: center;
   gap: 2.4rem;
   padding: 4rem 2.4rem;
+  @media screen and (min-width: 768px) {
+                height: 100vh;
+            }
 `;
