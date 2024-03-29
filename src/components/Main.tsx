@@ -20,7 +20,6 @@ const cardsData = [
         description:
           "Quem navega na internet, certamente já percebeu que ela conta com diversos recursos para tornar a nossa vida mais fácil. Entre essas opções podemos mencionar os hiperlinks – uma palavra ou termo clicável que direciona o leitor.",
       },
-    // Adicione mais objetos de cartão conforme necessário
   ];
 export default function Main() {
     return (
@@ -29,7 +28,7 @@ export default function Main() {
     </StyledMain>
     )
 }
-
+//Styled components
 export const StyledMain = styled.main `
   background-color: var(--dark-10);
   display: flex;
