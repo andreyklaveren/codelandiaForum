@@ -1,52 +1,32 @@
 import styled from "styled-components";
-import heart from "../assets/heart.svg";
+import Card from "./Card";
 
+const cardsData = [
+    {
+      date: "17 de ago, 2024",
+      title: "O que é linguagem de programação? Conheça as principais",
+      description:
+        "Uma das mais populares vertentes da tecnologia da informação, a área de programação segue tendo muita demanda de trabalho justamente pela velocidade com que dispositivos tecnológicos vêm avançando.",
+    },
+    {
+        date: "12 de jul, 2024",
+        title: "GitHub agora permite fazer login sem precisar de senha",
+        description:
+          "O GitHub anunciou nesta quarta-feira (12) o acesso a partir das passkeys, método de autenticação sem senhas. A novidade está disponível em uma versão beta pública e pode substituir a autenticação em dois fatores.",
+      },
+      {
+        date: "21 de jun, 2024",
+        title: "Por que os hiperlinks são azuis em sua maioria?",
+        description:
+          "Quem navega na internet, certamente já percebeu que ela conta com diversos recursos para tornar a nossa vida mais fácil. Entre essas opções podemos mencionar os hiperlinks – uma palavra ou termo clicável que direciona o leitor.",
+      },
+    // Adicione mais objetos de cartão conforme necessário
+  ];
 export default function Main() {
     return (
-        <StyledMain>
-        <div className="card">
-          <div className="card-header">
-            <h3 className="date">17 de ago, 2024</h3>
-            <img id="heart-svg" src={heart} />
-          </div>
-          <h2 className="title">
-            O que é linguagem de programação? Conheça as principais
-          </h2>
-          <p className="description">
-            Uma das mais populares vertentes da tecnologia da informação, a área
-            de programação segue tendo muita demanda de trabalho justamente pela
-            velocidade com que dispositivos tecnológicos vêm avançando.
-          </p>
-        </div>
-        <div className="card">
-          <div className="card-header">
-            <h3 className="date">17 de ago, 2024</h3>
-            <img className="heart-svg" src={heart} />
-          </div>
-          <h2 className="title">
-            O que é linguagem de programação? Conheça as principais
-          </h2>
-          <p className="description">
-            Uma das mais populares vertentes da tecnologia da informação, a área
-            de programação segue tendo muita demanda de trabalho justamente pela
-            velocidade com que dispositivos tecnológicos vêm avançando.
-          </p>
-        </div>
-        <div className="card">
-          <div className="card-header">
-            <h3 className="date">17 de ago, 2024</h3>
-            <img className="heart-svg" src={heart} />
-          </div>
-          <h2 className="title">
-            O que é linguagem de programação? Conheça as principais
-          </h2>
-          <p className="description">
-            Uma das mais populares vertentes da tecnologia da informação, a área
-            de programação segue tendo muita demanda de trabalho justamente pela
-            velocidade com que dispositivos tecnológicos vêm avançando.
-          </p>
-        </div>
-      </StyledMain>
+    <StyledMain>
+        <Card cards={cardsData}/>
+    </StyledMain>
     )
 }
 
@@ -57,31 +37,4 @@ export const StyledMain = styled.main `
   align-items: center;
   gap: 2.4rem;
   padding: 4rem 2.4rem;
-    .card {
-        padding: 3.2rem 2.4rem;
-        border: 2px solid var(--brand-color);
-        border-radius: 0.8rem;
-        .card-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 2rem;
-            .date {
-                color: var(--brand-color);
-                font-size: 1.2rem;
-                font-weight: 500;
-            }
-            .heart-svg {
-                cursor: pointer;
-            }
-        }
-    }
-    .title {
-        font-size: 2rem;
-        font-weight: 500;
-        margin-bottom: 1.6rem;
-    }
-    .description {
-        color: var(--dark-50);
-    }
 `;

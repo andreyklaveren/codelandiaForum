@@ -39,6 +39,9 @@ export const StyledHeader = styled.header`
         padding: 1.6rem 0 1.6rem 2.4rem;
         border: 2px solid var(--dark-40);
         border-radius: 0.8rem;
+        @media screen and (min-width: 768px) {
+        width: 70%;
+        }
     }
     .input-search,
     input {
